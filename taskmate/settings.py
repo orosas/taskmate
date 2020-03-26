@@ -156,8 +156,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles') # Omar: Configuración para static files para deployment
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4' # Omar: Configuración de crispy forms
 
 LOGIN_REDIRECT_URL = 'todolist' # Omar Se usa para redireccionar el login hacia un view en específico usando 
                                 # la funcionalidad automática (Clase based view) the login en Django
