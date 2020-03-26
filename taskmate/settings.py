@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-import django-heroku # Omar: Configuración de django-heroku
+import django_heroku # Omar: Configuración de django-heroku
 import os
 import environ # Omar: Configuración para hacer deployment en heroku con django-environ, y mover secret_key, debug y allowed_hosts a archivo .env
 
