@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+    {% block title%}
+      <title>Edit Task - Taskmate</title>
+    {% endblock title %}
+
+      {% block content %}
+    
+      <div class="container">
+
+        {% if task_object.manage == request.user %}
+
+          <h1>Edit Task: {{ task_object.task }}</h1>
+
+            <form method="POST" class="row">
+              {% csrf_token %}
+              <label class="col-lg-2"></label>
+                <input type="text" class="form-control col-lg-6" name="task" placeholder="{{ task_object.task }}" value="{{ task_object.task }}">
+                <input type="hidden" name="done" value="{{ task_object.done }}">
+                <button type="submit" class="btn btn-primary col-lg-2">Update Task</button>
+            </form>
+        {% else %}
+          <h2 class="mt-5 text-warning">Access Restricted. You Are Not Allowed To Edit This Task!</h2>
+          <p><a href="{% url 'todolist' %}">Go back to ToDo Page</a></p>
+      {% endif %}
+      </div>
+      {% endblock content %}

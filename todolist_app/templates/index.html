@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title%}
+      <title>Welcome To Taskmate!</title>
+    {% endblock title %}
+
+      {% block content %}
+
+            <div class="container">
+              <div class="row mt-5">
+
+                <div class="col-lg-4">
+                  <img src="{% static 'images/stickynotes.jpg' %}" class="rounded-lg shadow-lg p-3 mb-5 bg-white rounded" alt="Note" width="360" height="250">
+                </div>
+
+                <div class="col-lg-4">
+                  <img src="{% static 'images/notes2.jpg' %}" class="rounded shadow p-3 mb-5 bg-white rounded" alt="Note" width="360" height="250">
+                </div>
+
+                <div class="col-lg-4">
+                  <img src="{% static 'images/notes3.jpg' %}" class="rounded-sm shadow-sm p-3 mb-5 bg-white rounded" alt="Photo by Daria Nepriakhina on Unsplash" width="360" height="250">
+                </div>
+              </div>
+
+                <div class="row mt-5">
+                        <div class="card-group">
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'images/stickynotes.jpg' %}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'images/notes2.jpg' %}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'images/notes3.jpg' %}" alt="Photo by Daria Nepriakhina on Unsplash">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+
+                <div class="row mt-5">
+                  <div class="col-md-10 offset-md-1">
+                      <center><p class="h1 text-primary">Quick And Easy To Use, Anytime, Anywhere!</p></center>
+                      <center><p class="h2 mt-3">"Plan Your Day Better, Get Your Life Organized"</p></center>
+                      <center><p class="h5">TASKMATE Lets You Keep Track Of Your Task In One Place</p></center>
+                      <center><a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary btn-lg mt-3 mb-5 shadow">Let's Get Started</button></a></center>
+                  </div>
+                </div>
+
+
+              
+            </div>
+      {% endblock content %}
