@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+import django-heroku # Omar: Configuración de django-heroku
 import os
-import environ
+import environ # Omar: Configuración para hacer deployment en heroku con django-environ, y mover secret_key, debug y allowed_hosts a archivo .env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -165,4 +165,4 @@ LOGIN_REDIRECT_URL = 'todolist' # Omar Se usa para redireccionar el login hacia 
 LOGIN_URL = 'login' # Omar: Se usa para redireccionar a la página de login en caso de que falle la autenticación
                     # del decorador @login_required en views
 
-                    
+django_heroku.settings(locals()) # Omar: Configuración de django-heroku
