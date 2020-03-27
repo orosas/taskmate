@@ -77,6 +77,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Simplified static file serving. # Omar: heroku deployment
+    # https://warehouse.python.org/project/whitenoise/ # Omar: heroku deployment
+    'whitenoise.middleware.WhiteNoiseMiddleware', # Omar: heroku deployment
 ]
 
 ROOT_URLCONF = 'taskmate.urls'
